@@ -1,0 +1,43 @@
+{
+	"name": "imgtxt",
+	"version": "0.0.1",
+	"description": "CLI tool to log text from an image",
+	"license": "MIT",
+	"repository": "jsmithdev/unicorn-fun-cli",
+	"author": {
+		"name": "Jamie Smith",
+		"email": "me@jsmith.dev",
+		"url": "https://jsmith.dev"
+	},
+	"type": "module",
+	"bin": {
+		"imgtxt": "cli.js"
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"start": "node cli.js",
+		"watch": "nodemon cli.js",
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"cli",
+		"imgtxt",
+		"image",
+		"text",
+		"image2text"
+	],
+	"dependencies": {
+		"meow": "^9.0.0",
+		"tesseract.js": "^2.1.4"
+	},
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"execa": "^5.0.0",
+		"xo": "^0.37.0"
+	}
+}

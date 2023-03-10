@@ -1,9 +1,15 @@
-import test from 'ava';
-import execa from 'execa';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-test('main', async t => {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+import test from 'ava';
+import {execa} from 'execa';
+
+test('main', async test => {
 	const {stdout} = await execa('./cli.js', [__dirname+'/test/eng_bw.png']);
-	t.is(stdout, response());
+	test.is(stdout, response());
 });
 
 function response(){

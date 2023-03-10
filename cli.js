@@ -15,8 +15,10 @@ const cli = meow(`
   Notes
     path can be a local path to an image or a url to an image
 	  local path can be encoded or not, for example 'my img.png' or 'my%20img.png' works
-
-`);
+	`, {
+		importMeta: import.meta,
+		flags: {},
+	});
 
 const input = cli.input.join(' ');
 
